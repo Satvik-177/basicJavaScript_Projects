@@ -1,0 +1,51 @@
+* {
+
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body {
+    
+    height:100vh;
+    width:100vw;
+   
+}
+
+.container {
+   
+   height:100vh;
+   width:100vw;
+   display:flex;
+   flex-direction: column; 
+   justify-content: center;
+   align-items: center;
+}
+
+.input-field {
+
+    height:5vh;
+    width:20vw;
+}
+
+form div {
+
+   
+    margin:10px;
+    padding:10px;
+
+}
+
+#bmibutton {
+
+    height:6vh;
+    width:12vw;
+    border-radius: 10px;
+    transform: translateY(15vh);
+    cursor:pointer;
+}
+
+h1 {
+
+    transform: translateY(-15vh);
+}

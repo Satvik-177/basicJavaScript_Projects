@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer using Js</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        
+        
+
+        <div class="button" id="color1">Click me</div>
+        <div class="button" id="color2">Click me</div>
+        <div class="button" id="color3">Click me</div>
+        <div class="button" id="color4">Click me</div>
+
+    </div>
+    <script>
+
+        
+        const buttons = document.querySelectorAll('.button');
+        const body = document.querySelector('body')
+
+        buttons.forEach(function (button) {
+        
+
+              button.addEventListener('click',function(e){
+                
+                if(e.target.id==='color1'){
+
+                body.style.backgroundColor = '#a28d25';
+
+                }
+
+                if(e.target.id==='color2'){
+
+                body.style.backgroundColor = '#703766';
+                }
+
+                if(e.target.id==='color3'){
+
+                body.style.backgroundColor = '#5fd45f';
+
+                }
+
+                if(e.target.id==='color4'){
+
+                body.style.backgroundColor = '#a11414';
+
+                }
+
+
+              });
+        });
+
+              
+        
+     </script>
+    
+</body>
+</html>
