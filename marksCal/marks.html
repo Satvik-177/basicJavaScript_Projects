@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Calculator</title>
+    <style>
+
+        * {
+
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        .container {
+
+            height:100vh;
+            width:100%;
+            border:3px solid red;
+            overflow:hidden;
+            background-image: url('background.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border:2px solid orange;
+        }
+
+        .markswrapper {
+
+            height:55%;
+            width:35%;
+            border:3px solid green;
+            margin-top:80px;
+            margin-left: 75px;
+            border-radius: 30px;
+            background-color: #534d4d;
+        }
+
+        #textInfo {
+
+            font-family: 'poppins',sans-serif;
+            width:40vw;
+            margin-top:20px;
+            margin-left:30px;
+            text-align: center;
+           
+        }
+
+        #textInfo #line1 {
+
+            font-size: 40px;
+        }
+
+        #textInfo #line2 {
+
+            font-size: 60px;
+            font-weight: 700;
+        }
+
+        ::placeholder{
+
+            color:#fff;
+        }
+
+        .Subjects #english {
+
+            margin-top:1em;
+            height:2em;
+            width:12em;
+            margin-left:2em;
+            padding:8px;
+            border-radius: 5px;
+            border: none;
+            background: transparent;
+            color:#fff;
+            border:1px solid #fff;
+
+        }
+
+        .Subjects #english:focus-visible {
+
+            outline:2px solid rgb(93, 243, 238);
+        }
+
+        .Subjects #science {
+
+
+            height:2em;
+            transform: translateY(-4.28vh);
+            margin-left:18.4em;
+            width:12em;
+            border-radius: 5px;
+            padding:8px;
+            border: none;
+            background: transparent;
+            color:#fff;
+            border:1px solid white;
+        }
+
+        .Subjects #science:focus-visible {
+
+            outline:2px solid rgb(93, 243, 238);
+        }
+
+        .Subjects #hindi {
+
+            height:2em;
+            margin:2em;
+            margin-left:2em;
+            width:12em;
+            border-radius: 5px;
+            padding:8px;
+            border: none;
+            background: transparent;
+            color:#fff;
+            border:1px solid white;
+
+        }
+
+        .Subjects #hindi:focus-visible {
+
+            outline:2px solid rgb(93, 243, 238);
+        }
+
+        .Subjects #maths {
+
+            height:2em;
+            margin:2em;
+            margin-left:2em;
+            width:12em;
+            border-radius: 5px;
+            padding:8px;
+            background: transparent;
+            color:#fff;
+            border:1px solid white;
+        }
+
+        
+
+        .Subjects #maths:focus-visible {
+
+            outline:2px solid rgb(93, 243, 238);
+        }
+
+        #btn {
+
+            margin-left:14vw;
+            padding:5px;
+            width:85px;
+            color:#fff;
+            background-color:rgb(56, 155, 155);
+            cursor:pointer;
+            border:none;
+            transition:0.5s ease-in;
+            border-radius: 6px;
+        }
+
+        #btn:hover {
+
+            transform:scale(1.1);
+            transition:0.5s ease-in;
+        }
+
+        #results {
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            padding:7px;
+            margin-top: 8px;
+        }
+     
+    </style>
+
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="markswrapper">
+
+            <div class="Subjects">
+
+                <input type="number" placeholder="Hindi" id="hindi">
+                <input type="number" placeholder="Mathematics" id="maths">
+                <input type="number" placeholder="English" id="english">
+                <input type="number" placeholder="Science" id="science">
+                
+
+            </div>
+
+            <div class="button">
+
+                <button id="btn">Calculate</button>
+
+            </div>
+
+            <p id="results"></p>
+
+
+        </div>
+
+        <div id="textInfo">
+
+            <p id="line1">Calculate Your</p>
+            <p id="line2">Percentage</p>
+        </div>
+
+    </div>
+
+    <!-- <script src="marks.js"></script> -->
+    <script>
+
+        const btnEl = document.getElementById('btn');
+        const hindimarks = document.getElementById('hindi');
+        const mathsmarks = document.getElementById('maths');
+        const englishmarks = document.getElementById('english');
+        const sciencemarks = document.getElementById('science');
+        const perDisplay = document.querySelector('#results');
+        // console.log("hello");
+        
+        
+        const calcPercentage = () => {
+            
+            if(isNaN(parseFloat(hindimarks.value)) || isNaN(parseFloat(mathsmarks.value)) || isNaN(parseFloat(sciencemarks.value)) || isNaN(parseFloat(englishmarks.value))){
+
+                perDisplay.innerHTML=`Please enter valid marks`;
+            }
+
+           else { 
+            
+            const marksTotal = parseFloat(hindimarks.value)+ 
+                               parseFloat(mathsmarks.value)+ 
+                               parseFloat(sciencemarks.value)+
+                               parseFloat(englishmarks.value); 
+            
+            const maxMarks = 400;
+            
+            const percentage = Math.round(marksTotal/4);
+            
+                perDisplay.innerHTML=`Your total marks is ${marksTotal} out of ${maxMarks} and percentage is ${percentage} %`;
+            
+            } 
+        }
+
+        
+
+    btnEl.addEventListener('click',calcPercentage);
+ 
+        
+     </script>
+    
+</body>
+</html>
