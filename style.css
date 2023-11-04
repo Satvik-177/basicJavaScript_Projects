@@ -1,0 +1,162 @@
+* {
+
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container {
+
+    height:100vh;
+    width:100%;
+    border:3px solid red;
+    overflow:hidden;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:2px solid orange;
+}
+
+.markswrapper {
+
+    height:55%;
+    width:35%;
+    border:3px solid green;
+    margin-top:80px;
+    margin-left: 75px;
+    border-radius: 30px;
+    background-color: #534d4d;
+}
+
+#textInfo {
+
+    font-family: 'poppins',sans-serif;
+    width:40vw;
+    margin-top:20px;
+    margin-left:30px;
+    text-align: center;
+   
+}
+
+#textInfo #line1 {
+
+    font-size: 40px;
+}
+
+#textInfo #line2 {
+
+    font-size: 60px;
+    font-weight: 700;
+}
+
+::placeholder{
+
+    color:#fff;
+}
+
+.Subjects #english {
+
+    margin-top:1em;
+    height:2em;
+    width:12em;
+    margin-left:2em;
+    padding:8px;
+    border-radius: 5px;
+    border: none;
+    background: transparent;
+    color:#fff;
+    border:1px solid #fff;
+
+}
+
+.Subjects #english:focus-visible {
+
+    outline:2px solid rgb(93, 243, 238);
+}
+
+.Subjects #science {
+
+
+    height:2em;
+    transform: translateY(-4.28vh);
+    margin-left:18.4em;
+    width:12em;
+    border-radius: 5px;
+    padding:8px;
+    border: none;
+    background: transparent;
+    color:#fff;
+    border:1px solid white;
+}
+
+.Subjects #science:focus-visible {
+
+    outline:2px solid rgb(93, 243, 238);
+}
+
+.Subjects #hindi {
+
+    height:2em;
+    margin:2em;
+    margin-left:2em;
+    width:12em;
+    border-radius: 5px;
+    padding:8px;
+    border: none;
+    background: transparent;
+    color:#fff;
+    border:1px solid white;
+
+}
+
+.Subjects #hindi:focus-visible {
+
+    outline:2px solid rgb(93, 243, 238);
+}
+
+.Subjects #maths {
+
+    height:2em;
+    margin:2em;
+    margin-left:2em;
+    width:12em;
+    border-radius: 5px;
+    padding:8px;
+    background: transparent;
+    color:#fff;
+    border:1px solid white;
+}
+
+
+
+.Subjects #maths:focus-visible {
+
+    outline:2px solid rgb(93, 243, 238);
+}
+
+#btn {
+
+    margin-left:14vw;
+    padding:5px;
+    width:85px;
+    color:#fff;
+    background-color:rgb(56, 155, 155);
+    cursor:pointer;
+    border:none;
+    transition:0.5s ease-in;
+    border-radius: 6px;
+}
+
+#btn:hover {
+
+    transform:scale(1.1);
+    transition:0.5s ease-in;
+}
+
+#results {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding:7px;
+    margin-top: 8px;
+}
